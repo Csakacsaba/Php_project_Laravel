@@ -1,0 +1,110 @@
+/* Alap stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar stílusok */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* Tartalom stílusok */
+.content {
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Táblázat stílusok */
+h2.h2_fontsize {
+    color: #3498db;
+}
+
+table.center {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+.table_row:hover {
+    background-color: #f5f5f5;
+}
+
+/* Gomb stílusok */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.image_size {
+    width: 100px;
+    height: 100px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #ffffff;
+    background-color: #ff5252;
+    border-color: #3f562f;
+}
+
+.alert-success .close {
+    color: #3c763d;
+}
+
+.alert-success a {
+    color: #2b542c;
+}
