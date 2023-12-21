@@ -12,15 +12,16 @@ class LoginController extends Controller
         return view('session.login');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $credentials = request()->validate([
+        $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
+        $rememberMe = $request->has('remember');
 
-        if (auth()->attempt($credentials)) {
+        if (auth()->attempt($credentials, $rememberMe)) {
             return redirect('/');
         }
 
@@ -28,6 +29,7 @@ class LoginController extends Controller
             ->withInput()
             ->withErrors(['email' => 'Your provided credentials could not be verified']);
     }
+
     public function destroy()
     {
         auth()->logout();

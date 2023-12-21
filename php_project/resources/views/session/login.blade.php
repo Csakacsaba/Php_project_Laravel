@@ -35,6 +35,9 @@
                 @enderror
 
                 <button type="submit" role="button">Belépés</button>
+                <label for="remember">
+                    <input type="checkbox" name="remember"> Remember Me
+                </label>
                 <button><a href="{{ route('register.page') }}">Regisztráció</a></button>
             </div>
         </form>

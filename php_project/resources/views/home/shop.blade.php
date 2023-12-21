@@ -6,8 +6,8 @@
 
 @section('content')
     @include('alert_message')
-    <div class="container" style="margin: 20px auto; display: flex;">
-        <div style="width: 80%" class="sidebar">
+    <div class="container" style="margin: 20px auto; display: flex">
+        <div class="sidebar" style="width: 20%">
             <div class="filter-group">
                 <label class="filter-label">Ár szűrés</label>
                 <select class="filter-select" id="priceFilter">
@@ -26,10 +26,10 @@
                 </select>
             </div>
         </div>
-        <div class="product-list" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <div class="product-list" style="display: flex; flex-wrap: wrap; justify-content: center; width: 80%">
             @foreach($products as $product)
                 <div class="product" style="margin: 20px; padding: 20px; border: 1px solid #ddd; text-align: center;">
-                    <h3>{{$product->title}}</h3>
+                    <a href="{{route('product', $product->id)}}"><h3>{{$product->title}}</h3></a>
                     <img class="image-sizing" src="/product/{{$product->image}}" alt="{{$product->title}} kép">
 
                     @if($product->discount)
